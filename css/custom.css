@@ -11867,6 +11867,10 @@ body {
   background-color: var(--black__1);
 }
 
+.navbar {
+  background-color: var(--black__1);
+}
+
 .button, .button--secondary, .button--primary {
   display: flex;
   width: 257px;
