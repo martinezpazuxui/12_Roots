@@ -1,0 +1,45 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+:root {
+    --green__primary: #226412;
+    --green__dark: #102A09;
+    --green__light: #68A25A;
+    --black__1: #060606;
+    --white__1: #D9D9D9;
+}
+
+body {
+    background-color: var(--black__1);
+}
+
+.button {
+    display: flex;
+    width: 257px;
+    padding: 10px 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
+    background: var(--green__primary);
+}
+
+.button--primary {
+    @extend .button;
+    background: var(--green__primary);
+}
+
+.button--secondary {
+    @extend .button;
+    background: none;
+    border: 1px solid var(--white__1);
+}
+
+.option-bar {
+    display: inline-flex;
+    padding: 10px 30px 10px 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
+    background: var(--green__primary);
+}
