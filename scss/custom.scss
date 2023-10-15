@@ -1,4 +1,48 @@
-@import "../node_modules/bootstrap/scss/bootstrap";
+
+/* TIPOGRAFÍAS */
+
+@font-face {
+    font-family: 'light';
+    src: url('../assets/fonts/Montserrat/Montserrat-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'medium';
+    src: url('../assets/fonts/Montserrat/Montserrat-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'semibold';
+    src: url('../assets/fonts/Montserrat/Montserrat-SemiBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'black';
+    src: url('../assets/fonts/Montserrat/Montserrat-Black.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Monument-Extended';
+    src: url('../assets/fonts/MonumentExtended/MonumentExtended-Ultrabold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* VARIABLES TIPOGRÁFICAS */
+
+$font-title: "Monument-Extended";
+$font-title: "Monument-Extended";
+
+
+/* COLORES */
 
 :root {
     --green__primary: #226412;
@@ -6,36 +50,76 @@
     --green__light: #68A25A;
     --black__1: #060606;
     --white__1: #D9D9D9;
+    --bs-body-font-family: 'black';
 }
+
+@import "../node_modules/bootstrap/scss/bootstrap";
 
 body {
     background-color: var(--black__1);
 }
 
+h1.titulo--principal {
+    font-family: $font-title;
+    /* Usa la familia de fuentes Montserrat-Black y, si no está disponible, usa fuentes sans-serif */
+    color: var(--white__1) !important;
+    span {
+        color: var(--green__primary) !important;
+    }
+}
+
+p.texto--principal {
+    font-family: 'light', sans-serif;
+    color: var(--white__1) !important;
+}
+
 .navbar {
     background-color: var(--black__1);
+    font-family: 'medium', sans-serif;
+    font-size: x-small;
+}
+
+.nav-link {
+    &:hover {
+        color: var(--green__light);
+    }
 }
 
 .button {
     display: flex;
-    width: 257px;
+    width: 100%;
     padding: 10px 30px;
     justify-content: center;
     align-items: center;
     gap: 10px;
     border-radius: 5px;
     background: var(--green__primary);
+    font-family: "medium", sans-serif;
+    font-weight: 700;
+    font-size: medium;
 }
 
 .button--primary {
     @extend .button;
+    color: var(--white__1);
     background: var(--green__primary);
+
+    &:hover {
+        background: var(--green__dark);
+        color: var(--white__1);
+    }
 }
 
 .button--secondary {
     @extend .button;
     background: none;
     border: 1px solid var(--white__1);
+    color: var(--white__1);
+
+    &:hover {
+        border: 1px solid var(--green__light);
+        color: var(--green__light);
+    }
 }
 
 .option-bar {
