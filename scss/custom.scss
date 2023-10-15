@@ -1,4 +1,3 @@
-
 /* TIPOGRAFÍAS */
 
 @font-face {
@@ -51,6 +50,8 @@ $font-title: "Monument-Extended";
     --black__1: #060606;
     --white__1: #D9D9D9;
     --bs-body-font-family: 'black';
+
+    --navbar--toggler__icon: url("../assets/icons/navbar-toggler-icon.png");
 }
 
 @import "../node_modules/bootstrap/scss/bootstrap";
@@ -59,10 +60,25 @@ body {
     background-color: var(--black__1);
 }
 
+/* COMPONENTES PRINCIPALES */
+
+.navbar {
+    background-color: var(--black__1);
+    font-family: 'medium', sans-serif;
+    font-size: x-small;
+
+    .nav-link {
+        &:hover {
+            color: var(--green__light);
+        }
+    }
+}
+
 h1.titulo--principal {
     font-family: $font-title;
     /* Usa la familia de fuentes Montserrat-Black y, si no está disponible, usa fuentes sans-serif */
     color: var(--white__1) !important;
+
     span {
         color: var(--green__primary) !important;
     }
@@ -71,17 +87,9 @@ h1.titulo--principal {
 p.texto--principal {
     font-family: 'light', sans-serif;
     color: var(--white__1) !important;
-}
 
-.navbar {
-    background-color: var(--black__1);
-    font-family: 'medium', sans-serif;
-    font-size: x-small;
-}
-
-.nav-link {
-    &:hover {
-        color: var(--green__light);
+    span {
+        font-family: "semibold";
     }
 }
 
@@ -130,4 +138,50 @@ p.texto--principal {
     gap: 10px;
     border-radius: 5px;
     background: var(--green__primary);
+}
+
+
+/* MEDIA QUERYS */
+
+
+@media (max-width: 576px) {
+    h1.titulo--principal {
+        text-align: center;
+    }
+
+    p.texto--principal {
+        text-align: center;
+    }
+
+    .portada__imagen {
+        display: none;
+    }
+
+    .navbar-brand {
+        img {
+            width: 50%;
+            height: 50%;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    h1.titulo--principal {
+        text-align: center;
+    }
+
+    p.texto--principal {
+        text-align: center;
+    }
+
+    .portada__imagen {
+        display: none;
+    }
+
+    .navbar-brand {
+        img {
+            width: 50%;
+            height: 50%;
+        }
+    }
 }

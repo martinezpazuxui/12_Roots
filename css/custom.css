@@ -39,6 +39,7 @@
   --black__1: #060606;
   --white__1: #D9D9D9;
   --bs-body-font-family: "black";
+  --navbar--toggler__icon: url("../assets/icons/navbar-toggler-icon.png");
 }
 
 /*!
@@ -11901,6 +11902,16 @@ body {
   background-color: var(--black__1);
 }
 
+/* COMPONENTES PRINCIPALES */
+.navbar {
+  background-color: var(--black__1);
+  font-family: "medium", sans-serif;
+  font-size: x-small;
+}
+.navbar .nav-link:hover {
+  color: var(--green__light);
+}
+
 h1.titulo--principal, .titulo--principal.h1 {
   font-family: "Monument-Extended";
   /* Usa la familia de fuentes Montserrat-Black y, si no está disponible, usa fuentes sans-serif */
@@ -11914,15 +11925,8 @@ p.texto--principal {
   font-family: "light", sans-serif;
   color: var(--white__1) !important;
 }
-
-.navbar {
-  background-color: var(--black__1);
-  font-family: "medium", sans-serif;
-  font-size: x-small;
-}
-
-.nav-link:hover {
-  color: var(--green__light);
+p.texto--principal span {
+  font-family: "semibold";
 }
 
 .button, .button--secondary, .button--primary {
@@ -11966,6 +11970,38 @@ p.texto--principal {
   gap: 10px;
   border-radius: 5px;
   background: var(--green__primary);
+}
+
+/* MEDIA QUERYS */
+@media (max-width: 576px) {
+  h1.titulo--principal, .titulo--principal.h1 {
+    text-align: center;
+  }
+  p.texto--principal {
+    text-align: center;
+  }
+  .portada__imagen {
+    display: none;
+  }
+  .navbar-brand img {
+    width: 50%;
+    height: 50%;
+  }
+}
+@media (max-width: 992px) {
+  h1.titulo--principal, .titulo--principal.h1 {
+    text-align: center;
+  }
+  p.texto--principal {
+    text-align: center;
+  }
+  .portada__imagen {
+    display: none;
+  }
+  .navbar-brand img {
+    width: 50%;
+    height: 50%;
+  }
 }
 
 /*# sourceMappingURL=custom.css.map */
