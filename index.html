@@ -58,7 +58,7 @@
     </div>
 
     <!-- PORTADA -->
-    <div class="container-xxl portada">
+    <div class="container-xxl portada__fondo">
         <div class="container col-xxl-10">
             <div class="row flex-lg-row align-items-center g-5 py-5">
                 <div class="col-lg-6">
@@ -82,9 +82,6 @@
                     <div class="portada__imagen">
                         <img src="assets/img/00_Img-portada.png">
                     </div>
-                    <div class="portada__icons">
-                        <img src="assets/icons/social-media__icons.png">
-                    </div>
                 </div>
             </div>
         </div>
@@ -92,9 +89,9 @@
 
 
     <!-- NOTICIAS -->
-    <div class="container-xxl">
+    <div class="container-xxl noticias">
         <div class="container col-xxl-10 py-10">
-            <section class="col-12">
+            <section class="col-12 noticias">
                 <h2 class="titulo--secundario display-4">NOTICIAS <span>DEL ROCK</span></h2>
             </section>
 
@@ -142,113 +139,245 @@
         </div>
     </div>
 
+    <!-- PROGRAMACIÓN-->
+    <div class="container-xxl programacion">
+        <div class="container col-xxl-10">
+            <section class="col-12 programacion">
+                <h2 class="titulo--secundario display-4">NUESTRA <span>PROGRAMACIÓN</span></h2>
+            </section>
+        </div>
+
+        <div class="container-xxl">
+            <div id="carouselExampleCaptions" class="carousel slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                        class="active indicator__active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="assets/img/programacion/nada-mas-queda.png" class="d-block w-100"
+                            alt="nada-mas-queda">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3 class="titulo--terciario">NADA MÁS QUEDA</h3>
+                            <h4><span>LUN-VIE</span> - 09:00 a 13:00</h4>
+                            <p>Some representative placeholder content for the second slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item active">
+                        <img src="assets/img/programacion/no-lo-soñe.png" class="d-block w-100" alt="no-lo-soñe">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3 class="titulo--terciario">NO LO SOÑE</h3>
+                            <h4><span>LUN-VIE</span> - 09:00 a 13:00</h4>
+                            <p>Some representative placeholder content for the third slide.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!--BANNER-->
+    <div class="container-xxl banner">
+        <div>
+            <h1 class="titulo--banner display-1 fw-bold">SOLO ROCK EN CASTELLANO
+            </h1>
+        </div>
+    </div>
 
     <!--SHOWS-->
-    <div class="container-xxl-12 shows__imagen">
-        <img src="assets/img/show-img.png">
-    </div>
+    <div class="container-12 shows">
+        <div class="container-12">
+            <div class="container-xxl-12 shows__imagen">
+                <img src="assets/img/show-img.png">
+            </div>
 
-    <div class="container col-xxl-10 py-10 separacion-estandar">
-        <div class="container col-xxl-10 titulo--compuesto">
-            <div>
-                <h2 class="titulo--secundario display-4"><span>PRÓXIMOS SHOWS</span><br>EN CÓRDOBA</h2>
+            <div class="container col-xxl-10 separacion--estandar">
+                <div class="container col-xxl-10 titulo--compuesto">
+                    <div>
+                        <h2 class="titulo--secundario display-4"><span>PRÓXIMOS SHOWS</span><br>EN CÓRDOBA</h2>
+                    </div>
+                    <div>
+                        <button type="button" class="btn button--primary">Participá por entradas</button>
+                    </div>
+                </div>
             </div>
-            <div>
-                <button type="button" class="btn button--primary">Participá por entradas</button>
-            </div>
+        </div>
+
+        <div class="container col-xxl-10 tabla">
+            <table class="table border-top-color table-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">Artista</th>
+                        <th scope="col">Locación</th>
+                        <th scope="col">Fecha</th>
+                    </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                    <tr>
+                        <td>Las pelotas</td>
+                        <td>Quality Espacio</td>
+                        <td>20.10.2023</td>
+                    </tr>
+                    <tr>
+                        <td>Conociendo Rusia</td>
+                        <td>Plaza de la música</td>
+                        <td>06.11.2023</td>
+                    </tr>
+                    <tr>
+                        <td>El Bordo</td>
+                        <td>Plaza de la música</td>
+                        <td>10.12.2023</td>
+                    </tr>
+                    <tr>
+                        <td>El mató a un policia motorizado</td>
+                        <td>Quality Espacio</td>
+                        <td>20.10.2023</td>
+                    </tr>
+                    <tr>
+                        <td>Vándalos Chinos</td>
+                        <td>Plaza de la música</td>
+                        <td>06.11.2023</td>
+                    </tr>
+                    <tr>
+                        <td>La Renga</td>
+                        <td>Plaza de la música</td>
+                        <td>10.12.2023</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 
-
-
-
-
-
-
-
-
-    <!-- NOTICIAS B-->
-    <div class="container-xxl">
-        <div class="container col-xxl-10 my-5">
-            <section class="col-12">
-                <h2 class="titulo--secundario">NOTICIAS DEL ROCK</h2>
-            </section>
-
-            <div class="row mb-2">
-                <div class="col-md-6">
-                    <div
-                        class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                        <div class="col p-4 d-flex flex-column position-static">
-                            <strong class="d-inline-block mb-2 text-primary-emphasis">World</strong>
-                            <h3 class="mb-0">Featured post</h3>
-                            <div class="mb-1 text-body-secondary">Nov 12</div>
-                            <p class="card-text mb-auto">This is a wider card with supporting text below as a natural
-                                lead-in to additional content.</p>
-                            <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
-                                Continue reading
-                                <svg class="bi">
-                                    <use xlink:href="#chevron-right"></use>
-                                </svg>
-                            </a>
-                        </div>
-                        <div class="col-auto d-none d-lg-block">
-                            <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg"
-                                role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice"
-                                focusable="false">
-                                <title>Placeholder</title>
-                                <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%"
-                                    fill="#eceeef" dy=".3em">Thumbnail</text>
-                            </svg>
-                        </div>
+    <!-- PORTADA B-->
+    <div class="container-xxl portada__fondo-b">
+        <div class="container col-xxl-10">
+            <div class="row flex-lg-row align-items-center g-5 py-5">
+                <div class="col-lg-6">
+                    <div class="portada__texto-b">
+                        <h2 class="titulo--principal display-6 fw-bold mb-3">20 AÑOS DE ROCK EN TU IDIOMA</h2>
+                        <p class="texto--principal py-4">Escucharás a los artistas que definieron generaciones y a las
+                            nuevas bandas que
+                            están listas para <span>escribir su propio capítulo en la historia del Rock en
+                                Castellano.</span></p>
+                    </div>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                        <button type="button" class="btn button--primary btn-lg px-4 me-md-2">Escuchá radio en
+                            vivo</button>
+                        <button type="button" class="btn button--secondary btn-lg px-4">Contactanos</button>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div
-                        class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                        <div class="col p-4 d-flex flex-column position-static">
-                            <strong class="d-inline-block mb-2 text-success-emphasis">Design</strong>
-                            <h3 class="mb-0">Post title</h3>
-                            <div class="mb-1 text-body-secondary">Nov 11</div>
-                            <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to
-                                additional content.</p>
-                            <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
-                                Continue reading
-                                <svg class="bi">
-                                    <use xlink:href="#chevron-right"></use>
-                                </svg>
-                            </a>
-                        </div>
-                        <div class="col-auto d-none d-lg-block">
-                            <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg"
-                                role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice"
-                                focusable="false">
-                                <title>Placeholder</title>
-                                <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%"
-                                    fill="#eceeef" dy=".3em">Thumbnail</text>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <div class="card mb-3 col-6">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="..." class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-                        </div>
+                <div class="col container__imagen">
+                    <div class="portada__imagen">
+                        <img src="assets/img/00_Img-portada.png">
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- CONTACTO -->
+    <div class="container-xxl-12 contacto">
+        <div class="container col-xxl-10 separacion--estandar">
+            <div class="container col-xxl-10 contacto-formulario">
+                <div>
+                    <h2 class="titulo--secundario display-4"><span>CONTACTANOS</span></h2>
+                    <h3>Teléfono</h3>
+                    <p>+54 351 5436 456</p>
+                    <h3>Dirección</h3>
+                    <p>Duarte Quiroz 546 - Local 8</p>
+                    <h3>contacto@pobrejohnny.com.ar</h3>
+                    <p>+54 351 5436 456</p>
+                    <h3>Área comercial</h3>
+                    <p>+54 351 5436 456 ventas@gruposhopping,com.ar</p>
+                </div>
+                <div>
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1"
+                                placeholder="name@example.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+
+                        <div class="mb-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="autoSizingCheck">
+                                <label class="form-check-label" for="autoSizingCheck">
+                                    Acepto los terminos y condiciones iste natus error sit voluptatem accusantium
+                                    doloremque
+                                    laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                                    architecto beatae vitae dicta sunt explicabo unde omnis rem aperiam.
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <button type="submit" class="btn button--primary">Enviar mensaje</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--FOOTER-->
+    <div class="container-xxl-12 footer">
+        <div class="container footer">
+            <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5">
+                <div class="col footer__logo">
+                    <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none"><img
+                            src="assets/icons/Logo_PJ.png">
+                        <svg class="bi me-2" width="40" height="32">
+                            <use xlink:href="#bootstrap"></use>
+                        </svg>
+                    </a>
+                    <p class="text-body-secondary">© Grupo Shopping.</p>
+                </div>
+
+                <div class="col">
+
+                </div>
+
+                <div class="col">
+
+                </div>
+
+                <div class="col footer__text">
+                    <h5>Section</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+                    </ul>
+                </div>
+
+                <div class="col footer__text">
+                    <h5>Section</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
