@@ -1,5 +1,4 @@
 /* TIPOGRAFÍAS */
-
 @font-face {
     font-family: 'light';
     src: url('../assets/fonts/Montserrat/Montserrat-Light.ttf') format('truetype');
@@ -35,14 +34,16 @@
     font-style: normal;
 }
 
-/* VARIABLES TIPOGRÁFICAS */
 
+
+
+/* VARIABLES TIPOGRÁFICAS */
 $font-title: "Monument-Extended";
-$font-title: "Monument-Extended";
+
+
 
 
 /* COLORES */
-
 :root {
     --green__primary: #226412;
     --green__dark: #102A09;
@@ -60,8 +61,12 @@ body {
     background-color: var(--black__1);
 }
 
+
+
+
 /* COMPONENTES PRINCIPALES */
 
+/*NAVBAR*/
 .navbar {
     background-color: var(--black__1);
     font-family: 'medium', sans-serif;
@@ -69,15 +74,39 @@ body {
 
     .nav-link {
         &:hover {
-            color: var(--green__light);
+            color: var(--green__primary);
+        }
+    }
+
+    .menu--desplegable {
+        font-size: x-small;
+    }
+
+    .navbar-brand {
+        img {
+            width: 80%;
+            height: 80%;
         }
     }
 }
 
+
+/*TEXTO*/
 h1.titulo--principal {
     font-family: $font-title;
     /* Usa la familia de fuentes Montserrat-Black y, si no está disponible, usa fuentes sans-serif */
     color: var(--white__1) !important;
+
+    span {
+        color: var(--green__primary) !important;
+    }
+}
+
+h2.titulo--secundario {
+    font-family: $font-title;
+    font-size: large;
+    color: var(--white__1) !important;
+    padding: 20px 0px;
 
     span {
         color: var(--green__primary) !important;
@@ -93,6 +122,7 @@ p.texto--principal {
     }
 }
 
+/*BOTONES*/
 .button {
     display: flex;
     width: 100%;
@@ -111,6 +141,15 @@ p.texto--principal {
     @extend .button;
     color: var(--white__1);
     background: var(--green__primary);
+
+    &:hover {
+        background: var(--green__dark);
+        color: var(--white__1);
+    }
+}
+
+.button--standar {
+    @extend .button;
 
     &:hover {
         background: var(--green__dark);
@@ -140,20 +179,133 @@ p.texto--principal {
     background: var(--green__primary);
 }
 
+/*PORTADAS*/
+div.portada {
+    margin-top: 80px;
+}
+
+div.portada__imagen {
+    display: flex;
+    justify-content: end;
+
+}
+
+div.portada__icons {
+    display: flex;
+    justify-content: end;
+    padding: 20px 0px;
+
+}
+
+div.card-body {
+    font-family: "semibold";
+    font-size: small;
+
+    .card-text {
+        font-family: "light";
+        font-size: smaller;
+    }
+}
+
+#portada__data {
+    align-content: flex-start;
+}
+
+section.noticias {
+    h2 {
+        padding: 40px 0px;
+    }
+}
+
+.container__noticias {
+    display: flex;
+    flex: 1;
+}
+
+/*SECCIÓN SHOWS*/
+
+.titulo--compuesto {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.separacion-estandar {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* MEDIA QUERYS */
+@media (min-width: 300px) and (max-width: 520px){
+    h1.titulo--principal {
+        font-size: 150%;
+    }
 
+    section.secciones__titulo {
+        display: flex;
+        justify-content: center;
+    }
 
-@media (max-width: 576px) {
+    div.shows__imagen {
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .titulo--compuesto {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+
+        h2 {
+            text-justify: center;
+            text-align: center;
+        }
+    }
+}
+
+@media (max-width: 556px) {
     h1.titulo--principal {
         text-align: center;
+    }
+
+    h2.titulo--secundario {
+        margin-bottom: 20px;
     }
 
     p.texto--principal {
         text-align: center;
     }
 
-    .portada__imagen {
+    .container__imagen {
         display: none;
     }
 
@@ -163,9 +315,32 @@ p.texto--principal {
             height: 50%;
         }
     }
+
+    div.portada__texto {
+        margin-bottom: 120px;
+    }
+
+    div.shows__imagen {
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .titulo--compuesto {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+
+        h2 {
+            text-justify: center;
+        }
+    }
 }
 
-@media (max-width: 992px) {
+@media (min-width: 556px) and (max-width: 768px) {
     h1.titulo--principal {
         text-align: center;
     }
@@ -174,7 +349,7 @@ p.texto--principal {
         text-align: center;
     }
 
-    .portada__imagen {
+    .container__imagen {
         display: none;
     }
 
@@ -182,6 +357,64 @@ p.texto--principal {
         img {
             width: 50%;
             height: 50%;
+        }
+    }
+
+    div.shows__imagen {
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .titulo--compuesto {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+
+        h2 {
+            text-justify: left;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    h1.titulo--principal {
+        text-align: center;
+    }
+
+    p.texto--principal {
+        text-align: center;
+    }
+
+    .container__imagen {
+        display: none;
+    }
+
+    .navbar-brand {
+        img {
+            width: 50%;
+            height: 50%;
+        }
+    }
+
+    div.shows__imagen {
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .titulo--compuesto {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-between;
+
+        h2 {
+            text-justify: left;
         }
     }
 }
