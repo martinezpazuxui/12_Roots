@@ -11981,7 +11981,7 @@ p.texto--principal span {
 
 /*----------------------------------------------------------------------------------*/
 /*BOTONES*/
-.button, .button--secondary, .button--standar, .button--primary {
+.button, .button--secondary, .button--standar, .button--primary, .button--primary--dark {
   display: flex;
   width: 100%;
   padding: 10px 30px;
@@ -11995,12 +11995,20 @@ p.texto--principal span {
   font-size: medium;
 }
 
-.button--primary {
+.button--primary, .button--primary--dark {
   color: var(--white__1);
   background: var(--green__primary);
 }
-.button--primary:hover {
+.button--primary:hover, .button--primary--dark:hover {
   background: var(--green__dark);
+  color: var(--white__1);
+}
+
+.button--primary--dark {
+  background: var(--black__1);
+}
+.button--primary--dark:hover {
+  background: var(--green__light);
   color: var(--white__1);
 }
 
@@ -12033,6 +12041,7 @@ p.texto--principal span {
   color: var(--green__primary);
 }
 
+/*----------------------------------------------------------------------------------*/
 /*PORTADAS*/
 div.portada__fondo {
   margin-top: 0px;
@@ -12068,6 +12077,7 @@ div.card-body .card-text {
   align-content: flex-start;
 }
 
+/*----------------------------------------------------------------------------------*/
 /*SECCION NOTICIAS*/
 div.noticias {
   background-color: var(--black__1);
@@ -12080,13 +12090,13 @@ div.noticias .container__noticias {
   flex: 1;
 }
 
+/*----------------------------------------------------------------------------------*/
 /*SECCION PROGRAMACIÓN*/
 div.programacion {
   background-color: var(--black__1);
 }
 div.programacion section.programacion h2, div.programacion section.programacion .h2 {
   padding: 40px 0px;
-  text-align: end;
 }
 div.programacion h4, div.programacion .h4 {
   font-family: "semibold";
@@ -12097,6 +12107,7 @@ div.programacion p {
   font-size: smaller;
 }
 
+/*----------------------------------------------------------------------------------*/
 /*SECCIÓN SHOWS*/
 div.shows {
   background-color: var(--black__1);
@@ -12111,7 +12122,8 @@ table.border-top-color {
   color: var(--green__primary);
 }
 
-/*PORTADA B*/
+/*----------------------------------------------------------------------------------*/
+/*PORTADA B - 20 AÑOS*/
 div.portada__fondo-b {
   margin-top: 0px;
   padding-top: 80px;
@@ -12148,6 +12160,7 @@ div.card-body .card-text {
   align-content: flex-start;
 }
 
+/*----------------------------------------------------------------------------------*/
 /*CONTACTO*/
 div.contacto {
   background-color: var(--white__1);
@@ -12170,6 +12183,7 @@ div.contacto div.contacto-formulario p {
   font-size: small;
 }
 
+/*----------------------------------------------------------------------------------*/
 /*BANNER*/
 div.banner {
   background-color: var(--green__primary);
@@ -12186,11 +12200,16 @@ div.banner .titulo--banner {
   margin-bottom: 0px;
 }
 
+/*----------------------------------------------------------------------------------*/
 /*FOOTER*/
 div.footer {
   background-color: var(--black__1);
 }
 
+/*----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
 /* MEDIA QUERYS */
 @media (min-width: 300px) and (max-width: 520px) {
   h1.titulo--principal, .titulo--principal.h1 {
