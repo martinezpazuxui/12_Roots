@@ -38,6 +38,7 @@
 
 /* VARIABLES TIPOGRÁFICAS */
 $font-title: "Monument-Extended";
+$font-text: "light";
 
 /*----------------------------------------------------------------------------------*/
 
@@ -56,8 +57,6 @@ $secondary: #D9D9D9;
 }
 
 @import "../node_modules/bootstrap/scss/bootstrap";
-
-body {}
 
 /*----------------------------------------------------------------------------------*/
 
@@ -131,6 +130,10 @@ h4 {
     }
 }
 
+h5 {
+    font-family: "medium", sans-serif;
+}
+
 p.texto--principal {
     font-family: 'light', sans-serif;
     color: var(--white__1) !important;
@@ -185,6 +188,15 @@ p.texto--principal {
     }
 }
 
+.button--primary--dark {
+    @extend .button--primary;
+    background: var(--black__1);
+
+    &:hover {
+        background: var(--green__light);
+    }
+}
+
 .button--standar {
     @extend .button;
 
@@ -219,6 +231,8 @@ p.texto--principal {
 .active {
     color: var(--green__primary);
 }
+
+/*----------------------------------------------------------------------------------*/
 
 /*PORTADAS*/
 div.portada__fondo {
@@ -256,63 +270,9 @@ div.card-body {
     align-content: flex-start;
 }
 
-/*SECCION NOTICIAS*/
-div.noticias {
+/*----------------------------------------------------------------------------------*/
 
-    background-color: var(--black__1);
-
-    section.noticias {
-        h2 {
-            padding: 40px 0px;
-        }
-    }
-
-    .container__noticias {
-        display: flex;
-        flex: 1;
-    }
-
-}
-
-/*SECCION PROGRAMACIÓN*/
-div.programacion {
-
-    background-color: var(--black__1);
-
-    section.programacion {
-        h2 {
-            padding: 40px 0px;
-            text-align: end;
-        }
-    }
-
-    h4 {
-        font-family: "semibold";
-        font-size: small;
-
-    }
-
-    p {
-        font-family: "light";
-        font-size: smaller;
-    }
-}
-
-/*SECCIÓN SHOWS*/
-div.shows {
-    background-color: var(--black__1);
-}
-
-/*TABLAS*/
-div.tabla {
-    padding-bottom: 100px;
-}
-
-table.border-top-color {
-    color: var(--green__primary);
-}
-
-/*PORTADA B*/
+/*PORTADA B - 20 AÑOS*/
 div.portada__fondo-b {
     margin-top: 0px;
     padding-top: 80px;
@@ -350,6 +310,73 @@ div.card-body {
     align-content: flex-start;
 }
 
+/*----------------------------------------------------------------------------------*/
+
+/*SECCION NOTICIAS*/
+div.noticias {
+
+    background-color: var(--black__1);
+
+    section.noticias {
+        h2 {
+            padding: 40px 0px;
+        }
+    }
+
+    .container__noticias {
+        display: flex;
+        flex: 1;
+    }
+
+}
+
+/*----------------------------------------------------------------------------------*/
+
+/*SECCION PROGRAMACIÓN*/
+div.programacion {
+
+    background-color: var(--black__1);
+
+    section.programacion {
+        h2 {
+            padding: 40px 0px;
+        }
+    }
+
+    h4 {
+        font-family: "semibold";
+        font-size: small;
+
+    }
+
+    p {
+        font-family: "light";
+        font-size: smaller;
+    }
+}
+
+/*----------------------------------------------------------------------------------*/
+
+/*SECCIÓN SHOWS*/
+div.shows {
+    background-color: var(--black__1);
+}
+
+/*TABLAS*/
+div.tabla {
+    padding-bottom: 100px;
+}
+
+div.tabla-b {
+    padding-bottom: 50px;
+}
+
+table.border-top-color {
+    color: var(--green__primary);
+}
+
+/*----------------------------------------------------------------------------------*/
+
 /*CONTACTO*/
 div.contacto {
 
@@ -379,6 +406,8 @@ div.contacto {
     }
 }
 
+/*----------------------------------------------------------------------------------*/
+
 /*BANNER*/
 div.banner {
     background-color: var(--green__primary);
@@ -397,38 +426,23 @@ div.banner {
     }
 }
 
+/*----------------------------------------------------------------------------------*/
+
 /*FOOTER*/
 div.footer {
     background-color: var(--black__1);
 }
 
-div.footer__text {}
+div.footer__text {
+    font-family: "medium";
+}
 
 div.footer__logo {}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
 
 /* MEDIA QUERYS */
 @media (min-width: 300px) and (max-width: 520px) {
